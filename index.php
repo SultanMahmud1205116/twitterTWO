@@ -9,7 +9,7 @@ $settings = array(
     'consumer_secret' => "Mc1klDqUy380T41HiE3famsxprnul73Eo2k99GtBtmsttbyCVi"
 );
  
-$url = "https://api.twitter.com/1.1/friends/list.json";
+$url = "https://api.twitter.com/1.1/followers/ids.json";
  
 $requestMethod = "GET";
  
