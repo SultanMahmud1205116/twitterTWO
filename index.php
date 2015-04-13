@@ -9,14 +9,16 @@ $settings = array(
     'consumer_secret' => "Mc1klDqUy380T41HiE3famsxprnul73Eo2k99GtBtmsttbyCVi"
 );
  
-$url = "https://api.twitter.com/1.1/statuses/home_timeline.json";
+$url = "https://api.twitter.com/1.1/followers/list.json";
  
 $requestMethod = "GET";
  
 $getfield = '?screen_name=iagdotme&count=20';
  
 $twitter = new TwitterAPIExchange($settings);
+echo <pre>
 echo $twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
              ->performRequest();
+echo </pre>
 ?>
