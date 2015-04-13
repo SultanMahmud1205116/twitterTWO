@@ -13,7 +13,7 @@ $url = "https://api.twitter.com/1.1/statuses/home_timeline.json";
  
 $requestMethod = "GET";
  
-$getfield = '?screen_name=ItamXeed&count=40';
+$getfield = '?screen_name=ItamXeed&&since:2015-04-09&until:2015-04-11';
  
 $twitter = new TwitterAPIExchange($settings);
 echo "<pre>";
