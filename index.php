@@ -13,7 +13,7 @@ $url = "https://api.twitter.com/1.1/statuses/home_timeline.json";
  
 $requestMethod = "GET";
  
-$getfield = '?screen_name=iagdotme&count=20';
+$getfield = '?screen_name=1205116_sm&count=20000';
  
 $twitter = new TwitterAPIExchange($settings);
 echo "<pre>";
