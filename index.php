@@ -13,7 +13,7 @@ $url = "https://api.twitter.com/1.1/statuses/home_timeline.json";
  
 $requestMethod = "GET";
  
-$getfield = '?screen_name=ItamXeed&since:2015-04-09&until:2015-04-11';
+$getfield = '?screen_name=1205116_sm&since:2015-04-09&until:2015-04-11';
  
 $twitter = new TwitterAPIExchange($settings);
 /*
@@ -41,12 +41,12 @@ foreach($string as $items)
 
 
         echo "post id : ".$items['id_str']."<br />";
-        echo "user ID : ".$items['user']['id_str']."<br />";
+        echo "poster ID : ".$items['user']['id_str']."<br />";
         echo "post : ".$items['text']."<br />";
         echo "post provider : ".$items['user']['name']."<br />";
         echo "post time : ".$items['created_at']."<br />";
-        echo " # of retweets : ".$items['user']['retweets_count']."<br />";
-        echo " # of likes : ".$items['user']['favorites_count']."<br /><hr />";
+        echo " # of retweets : ".$items['retweets_count']."<br />";
+        echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
         
 
 
