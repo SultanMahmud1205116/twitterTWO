@@ -45,7 +45,7 @@ foreach($string as $items)
         echo "post : ".$items['text']."<br />";
         echo "post provider : ".$items['user']['name']."<br />";
         echo "post time : ".$items['created_at']."<br />";
-        echo " # of retweets : ".$items['retweets_count']."<br />";
+        echo " # of retweets : ".$items['retweet_count']."<br />";
         echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
         
 
