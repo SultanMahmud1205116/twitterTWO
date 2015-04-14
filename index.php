@@ -40,13 +40,13 @@ foreach($string as $items)
         */
 
 
-        echo "post id : ".$items['id_str']."<br/>";
-        echo "user ID : ".$items['user']['id_str']."<br/>";
-        echo "post : ".$items['text']."<br/>";
-        echo "post provider : ".$items['user']['name']."<br/>";
-        echo "post time : ".$items['created_at']."<br/>";
-        echo " # of retweets : ".$items['user']['retweets_count']."<br/>";
-        echo " # of likes : ".$items['user']['favorites_count']."<br/>";
+        echo "post id : ".$items['id_str']."<br />";
+        echo "user ID : ".$items['user']['id_str']."<br />";
+        echo "post : ".$items['text']."<br />";
+        echo "post provider : ".$items['user']['name']."<br />";
+        echo "post time : ".$items['created_at']."<br />";
+        echo " # of retweets : ".$items['user']['retweets_count']."<br />";
+        echo " # of likes : ".$items['user']['favorites_count']."<br /><hr />";
         
 
 
