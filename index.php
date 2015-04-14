@@ -16,9 +16,40 @@ $requestMethod = "GET";
 $getfield = '?screen_name=ItamXeed&since:2015-04-09&until:2015-04-11';
  
 $twitter = new TwitterAPIExchange($settings);
+/*
 echo "<pre>";
 print_r($twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
              ->performRequest()) ;
 echo "</pre>";
+*/
+$string = json_decode($twitter->setGetfield($getfield)
+->buildOauth($url, $requestMethod)
+->performRequest(),$assoc = TRUE);
+if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
+foreach($string as $items)
+    {
+    	/*
+        echo "Time and Date of Tweet: ".$items['created_at']."<br />";
+        echo "Tweet: ". $items['text']."<br />";
+        echo "Tweeted by: ". $items['user']['name']."<br />";
+        echo "Screen name: ". $items['user']['screen_name']."<br />";
+        echo "Followers: ". $items['user']['followers_count']."<br />";
+        echo "Friends: ". $items['user']['friends_count']."<br />";
+        echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
+        */
+
+
+        echo "post id : ".$items['id_str']."<br/>";
+        echo "user ID : ".$items['user']['id_str']."<br/>";
+        echo "post : ".$items['text']."<br/>";
+        echo "post provider : ".$items['user']['name']."<br/>";
+        echo "post time : ".$items['created_at']."<br/>";
+        echo " # of retweets : ".$items['user']['retweets_count']."<br/>";
+        echo " # of likes : ".$items['user']['favorites_count']."<br/>";
+        
+
+
+
+    }
 ?>
