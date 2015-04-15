@@ -40,16 +40,7 @@ foreach($string as $items)
         */
 
 
-        echo "post id : ".$items['id_str']."<br />";
-        echo "poster ID : ".$items['user']['id_str']."<br />";
-        echo "post : ".$items['text']."<br />";
-        echo "post provider : ".$items['user']['name']."<br />";
-        echo "post time : ".$items['created_at']."<br />";
-        echo " # of retweets : ".$items['retweet_count']."<br />";
-        echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
 
-
-        /*
         $data = array (
             'postID' => $items['id_str'],
             'userID' => $items['user']['id_str'],
@@ -62,7 +53,20 @@ foreach($string as $items)
 
         $this->db->insert('tPOst',$data);
 
-        */
+        
+
+
+
+        echo "post id : ".$items['id_str']."<br />";
+        echo "poster ID : ".$items['user']['id_str']."<br />";
+        echo "post : ".$items['text']."<br />";
+        echo "post provider : ".$items['user']['name']."<br />";
+        echo "post time : ".$items['created_at']."<br />";
+        echo " # of retweets : ".$items['retweet_count']."<br />";
+        echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
+
+
+        
 
 
 
