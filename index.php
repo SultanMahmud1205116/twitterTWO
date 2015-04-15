@@ -49,7 +49,7 @@ foreach($string as $items)
         echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
 
 
-        
+        /*
         $data = array (
             'postID' => $items['id_str'],
             'userID' => $items['user']['id_str'],
@@ -62,7 +62,7 @@ foreach($string as $items)
 
         $this->db->insert('tPOst',$data);
 
-        
+        */
 
 
 
