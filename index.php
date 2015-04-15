@@ -39,7 +39,7 @@ foreach($string as $items)
         echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
         */
 
-
+        /*
 
         $data = array (
             'postID' => $items['id_str'],
@@ -54,7 +54,7 @@ foreach($string as $items)
         $this->db->insert('tPOst',$data);
 
         
-
+        */
 
 
         echo "post id : ".$items['id_str']."<br />";
