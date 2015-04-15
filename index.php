@@ -16,28 +16,14 @@ $requestMethod = "GET";
 $getfield = '?screen_name=1205116_sm&count=30;
  
 $twitter = new TwitterAPIExchange($settings);
-/*
-echo "<pre>";
-print_r($twitter->setGetfield($getfield)
-             ->buildOauth($url, $requestMethod)
-             ->performRequest()) ;
-echo "</pre>";
-*/
+
 $string = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)
 ->performRequest(),$assoc = TRUE);
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 foreach($string as $items)
     {
-    	/*
-        echo "Time and Date of Tweet: ".$items['created_at']."<br />";
-        echo "Tweet: ". $items['text']."<br />";
-        echo "Tweeted by: ". $items['user']['name']."<br />";
-        echo "Screen name: ". $items['user']['screen_name']."<br />";
-        echo "Followers: ". $items['user']['followers_count']."<br />";
-        echo "Friends: ". $items['user']['friends_count']."<br />";
-        echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-        */
+    	
 
 
         echo "post id : ".$items['id_str']."<br />";
@@ -49,17 +35,7 @@ foreach($string as $items)
         echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
         
 
-        $data = array (
-            'postID' => $items['id_str'],
-            'userID' => $items['user']['id_str'],
-            'post'   => $items['text'],
-            'postProvider' => $items['user']['name'],
-            'time' => $items['created_at'],
-            'numberOfFavourites' => $items['user']['favourites_count'],
-            'numberOfRetweets'   => $items['user']['favourites_count']
-            );
-
-        $this->db->insert('tPOst',$data);
+        
 
 
 
