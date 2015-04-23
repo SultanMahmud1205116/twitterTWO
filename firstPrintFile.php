@@ -66,7 +66,7 @@ foreach($strings as $items)
         echo " # of likes : ".$strings['user']['favourites_count']."<br /><hr />";
 		*/
 		//this will be out of loop
-		echo "the thing is : "."<br />";
+		//echo "the thing is : "."<br />";
 		echo "the location is: ".$items['locations'][0]['name']."<br />";
 		echo "the woeid is: ".$items['locations'][0]['woeid']."<br />";
 		echo "the hashtag is ".$items['trends'][0]['name']."<br />";
@@ -79,11 +79,11 @@ foreach($strings as $items)
 		echo "the hashtag is ".$items['trends'][7]['name']."<br />";
 		echo "the hashtag is ".$items['trends'][8]['name']."<br />";
 		echo "the hashtag is ".$items['trends'][9]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][10]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][11]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][12]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][13]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][14]['name']."<br />";
+		//echo "the hashtag is ".$items['trends'][10]['name']."<br />";
+		//echo "the hashtag is ".$items['trends'][11]['name']."<br />";
+		//echo "the hashtag is ".$items['trends'][12]['name']."<br />";
+		//echo "the hashtag is ".$items['trends'][13]['name']."<br />";
+		//echo "the hashtag is ".$items['trends'][14]['name']."<br />";
 		//hello
 
 
