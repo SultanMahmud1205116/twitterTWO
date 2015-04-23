@@ -23,32 +23,32 @@ print_r($twitter->setGetfield($getfield)
              ->performRequest()) ;
 echo "</pre>";
 */
-$items = json_decode($twitter->setGetfield($getfield)
+$strings = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)
 ->performRequest(),$assoc = TRUE);
-if($items["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$items[errors][0]["message"]."</em></p>";exit();}
-//foreach($items as $items)
+if($strings["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$strings[errors][0]["message"]."</em></p>";exit();}
+//foreach($items as $strings)
     //{
         /*
-        echo "Time and Date of Tweet: ".$items['created_at']."<br />";
-        echo "Tweet: ". $items['text']."<br />";
-        echo "Tweeted by: ". $items['user']['name']."<br />";
-        echo "Screen name: ". $items['user']['screen_name']."<br />";
-        echo "Followers: ". $items['user']['followers_count']."<br />";
-        echo "Friends: ". $items['user']['friends_count']."<br />";
-        echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
+        echo "Time and Date of Tweet: ".$strings['created_at']."<br />";
+        echo "Tweet: ". $strings['text']."<br />";
+        echo "Tweeted by: ". $strings['user']['name']."<br />";
+        echo "Screen name: ". $strings['user']['screen_name']."<br />";
+        echo "Followers: ". $strings['user']['followers_count']."<br />";
+        echo "Friends: ". $strings['user']['friends_count']."<br />";
+        echo "Listed: ". $strings['user']['listed_count']."<br /><hr />";
         */
 
         /*
 
         $data = array (
-            'postID' => $items['id_str'],
-            'userID' => $items['user']['id_str'],
-            'post'   => $items['text'],
-            'postProvider' => $items['user']['name'],
-            'time' => $items['created_at'],
-            'numberOfFavourites' => $items['user']['favourites_count'],
-            'numberOfRetweets'   => $items['user']['favourites_count']
+            'postID' => $strings['id_str'],
+            'userID' => $strings['user']['id_str'],
+            'post'   => $strings['text'],
+            'postProvider' => $strings['user']['name'],
+            'time' => $strings['created_at'],
+            'numberOfFavourites' => $strings['user']['favourites_count'],
+            'numberOfRetweets'   => $strings['user']['favourites_count']
             );
 
         $this->db->insert('tPOst',$data);
@@ -57,33 +57,34 @@ if($items["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.<
         */
 
         /*
-        echo "post id : ".$items['trends'][1]['name']."<br />";
-        echo "poster ID : ".$items['user']['id_str']."<br />";
-        echo "post : ".$items['text']."<br />";
-        echo "post provider : ".$items['user']['name']."<br />";
-        echo "post time : ".$items['created_at']."<br />";
-        echo " # of retweets : ".$items['retweet_count']."<br />";
-        echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
+        echo "post id : ".$strings['trends'][1]['name']."<br />";
+        echo "poster ID : ".$strings['user']['id_str']."<br />";
+        echo "post : ".$strings['text']."<br />";
+        echo "post provider : ".$strings['user']['name']."<br />";
+        echo "post time : ".$strings['created_at']."<br />";
+        echo " # of retweets : ".$strings['retweet_count']."<br />";
+        echo " # of likes : ".$strings['user']['favourites_count']."<br /><hr />";
 		*/
 		//this will be out of loop
-		echo "the "
-		echo "the location is: ".$items['locations']['name']."<br />";
-		echo "the woeid is: ".$items['locations']['woeid']."<br />";
-		echo "the hashtag is ".$items['trends'][0]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][1]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][2]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][3]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][4]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][5]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][6]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][7]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][8]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][9]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][10]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][11]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][12]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][13]['name']."<br />";
-		echo "the hashtag is ".$items['trends'][14]['name']."<br />";
+		echo "the thing is : "."<br />";
+		echo "the location is: ".$strings['locations']['name']."<br />";
+		echo "the woeid is: ".$strings['locations']['woeid']."<br />";
+		echo "the hashtag is ".$strings['trends'][0]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][1]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][2]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][3]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][4]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][5]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][6]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][7]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][8]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][9]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][10]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][11]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][12]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][13]['name']."<br />";
+		echo "the hashtag is ".$strings['trends'][14]['name']."<br />";
+		//hello
 
 
         
