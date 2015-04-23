@@ -23,11 +23,11 @@ print_r($twitter->setGetfield($getfield)
              ->performRequest()) ;
 echo "</pre>";
 */
-$string = json_decode($twitter->setGetfield($getfield)
+$items = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)
 ->performRequest(),$assoc = TRUE);
-if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
-//foreach($string as $items)
+if($items["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$items[errors][0]["message"]."</em></p>";exit();}
+//foreach($items as $items)
     //{
         /*
         echo "Time and Date of Tweet: ".$items['created_at']."<br />";
@@ -66,23 +66,24 @@ if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.
         echo " # of likes : ".$items['user']['favourites_count']."<br /><hr />";
 		*/
 		//this will be out of loop
-		echo "the location is: ".$string['locations']['name']."<br />";
-		echo "the woeid is: ".$string['locations']['woeid']."<br />";
-		echo "the hashtag is ".$string['trends'][0]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][1]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][2]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][3]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][4]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][5]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][6]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][7]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][8]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][9]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][10]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][11]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][12]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][13]['name']."<br />";
-		echo "the hashtag is ".$string['trends'][14]['name']."<br />";
+		echo "the "
+		echo "the location is: ".$items['locations']['name']."<br />";
+		echo "the woeid is: ".$items['locations']['woeid']."<br />";
+		echo "the hashtag is ".$items['trends'][0]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][1]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][2]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][3]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][4]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][5]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][6]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][7]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][8]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][9]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][10]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][11]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][12]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][13]['name']."<br />";
+		echo "the hashtag is ".$items['trends'][14]['name']."<br />";
 
 
         
