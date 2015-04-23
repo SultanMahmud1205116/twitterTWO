@@ -27,7 +27,7 @@ $strings = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)
 ->performRequest(),$assoc = TRUE);
 if($strings["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$strings[errors][0]["message"]."</em></p>";exit();}
-foreach($items as $strings)
+foreach($strings as $items)
     //{
         /*
         echo "Time and Date of Tweet: ".$strings['created_at']."<br />";
