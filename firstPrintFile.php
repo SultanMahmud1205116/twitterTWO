@@ -67,8 +67,8 @@ foreach($strings as $items)
 		*/
 		//this will be out of loop
 		echo "the thing is : "."<br />";
-		echo "the location is: ".$items['locations']['name']."<br />";
-		echo "the woeid is: ".$items['locations']['woeid']."<br />";
+		echo "the location is: ".$items['locations'][0]['name']."<br />";
+		echo "the woeid is: ".$items['locations'][0]['woeid']."<br />";
 		echo "the hashtag is ".$items['trends'][0]['name']."<br />";
 		echo "the hashtag is ".$items['trends'][1]['name']."<br />";
 		echo "the hashtag is ".$items['trends'][2]['name']."<br />";
